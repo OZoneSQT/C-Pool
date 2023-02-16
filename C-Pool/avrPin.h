@@ -1,10 +1,16 @@
 #pragma once
 
+/*
+ * PORTx = Outpit
+ * DDRx = Direction In/Out
+ * PINx = Input
+ */
+
 /// Set IO => example:	setPinOutput(DDRB, PB0);
 #define setOutputPin(Port, pin) (port) |= ( 1 << pin )												
 #define setInputPin(Port, pin) (port) &= ~( 1 << pin )
 
-/// Set pin => example:	setPortState(PORTB, PB0);
+/// Set pin as output => example:	setPortState(PORTB, PB0);
 #define getPortState(port, bit) (port) & ( 1 << bit )		//(0-7)
 #define setPortState(port, bit) (port) |= ( 1 << bit )		//(0-7)
 #define clearPortState(port, bit) (port) &= ~( 1 << bit )	//(0-7)
