@@ -4,6 +4,10 @@
  * PORTx = Outpit
  * DDRx = Direction In/Out
  * PINx = Input
+ * 
+ * Alternative format:
+ * DDRx = 0xFF	or DDRx = 0b11111111
+ * 
  */
 
 /// Set IO => example:	setPinOutput(DDRB, PB0);
